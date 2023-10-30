@@ -100,7 +100,6 @@ function AddToTable() {
 
         // Delete the row
         row.remove();
-        updateTable();
     });
 
     // Append buttons to the "Action" cell
@@ -121,7 +120,7 @@ function AddToTable() {
     let currentPage = 1;
 
     //display rows for the current page
-    function updateTable(){
+    function updateTable() {
         const table = document.getElementById("myTable");
         const rows = table.rows;
     
@@ -158,19 +157,17 @@ function AddToTable() {
     });
 
 }
-
 // Button modifier et supprimer
 function createActionButton(text, clickHandler) {
     const button = document.createElement("button");
     button.textContent = text;
-    button.className = `btn btn-${text === "Modifier" ? "warning" : "danger"} me-3 btn-sm text-light`;
+    button.className = `btn btn-${text === "Modifier" ? "warning" : "danger"} me-3 btn-sm`;
     button.onclick = clickHandler;
     return button;
 }
 
-
 // function modifier
-function modifyRow(row){
+function modifyRow(row) {
     const nameInput = document.querySelector(".Prenom");
     const surnameInput = document.querySelector(".Nom");
     const dateInput = document.querySelector(".DateHeure");
@@ -183,7 +180,6 @@ function modifyRow(row){
     moneyInput.value = parseFloat(row.cells[3].textContent);
     optionSelect.value = row.cells[4].textContent;
 
-    updateTable();
 }
 
 // Barre de recherche
@@ -208,5 +204,4 @@ searchInp.addEventListener("input", function () {
 
         row.style.display = shouldDisplay ? "" : "none";
     });
-    updateTable();
 });
