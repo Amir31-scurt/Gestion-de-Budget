@@ -1,0 +1,24 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url(modern-background-technology-cable-blue-banners-background-can-use-for-background-on-website-or-mobile-apps-vector.jpg);
+    backdrop-filter: blur(12px);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.SommeCard{
+    background-image: linear-gradient(to right, #0A85ED , #0D41E1);
+}
+.card{
+    background-color: transparent;
+    border-radius: 10px;
+}
+.card1{
+    background-color: rgb(255, 255, 255); /* Fallback color */
+    background-color: rgba(255, 255, 255, 0.4); /* Black w/opacity/see-through */
+    backdrop-filter: blur(15px);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 20px;
+}
