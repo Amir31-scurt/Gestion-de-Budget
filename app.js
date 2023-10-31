@@ -24,7 +24,7 @@ function AddToTable() {
 
     const moneyValue = parseInt(moneyInput.value);
     if (isNaN(moneyValue) || moneyValue <= 0) {
-        alert("La somme doit commencer par 1Fcfa");
+        alert("La somme doit commencer par 1 Fcfa");
         moneyInput.classList.add("is-invalid");
         return;
     }
@@ -90,13 +90,6 @@ function AddToTable() {
         const row = this.closest("tr");
         const moneyCell = row.cells[3]; // Assuming the money value is in the 4th cell (index 3)
         const moneyValue = parseFloat(moneyCell.textContent);
-
-        // Subtract the money value from newTotal
-        const totalSumElement = document.getElementById("SommeTotale");
-        const currentTotal = parseFloat(totalSumElement.textContent);
-        const newTotal = currentTotal - moneyValue;
-
-        totalSumElement.textContent = newTotal + " Fcfa";
 
         // Delete the row
         row.remove();
